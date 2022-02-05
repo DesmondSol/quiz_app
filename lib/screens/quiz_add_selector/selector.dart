@@ -30,90 +30,58 @@ class Selector extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline4.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  //   Text("Enter your informations below"),
-                  // Spacer(), // 1/6
-                  // TextField(
-                  //   decoration: InputDecoration(
-                  //     filled: true,
-                  //     fillColor: Color(0xFF1C2341),
-                  //     hintText: "Full Name",
-                  //     border: OutlineInputBorder(
-                  //       borderRadius: BorderRadius.all(Radius.circular(12)),
-                  //     ),
-                  //   ),
-                  // ),
-                  Spacer(), // 1/6
-                  Row(
-                    children: <Widget>[
-                      // Expanded(
-                      //   child: Text('Deliver features faster',
-                      //       textAlign: TextAlign.center),
-                      // ),
-                      // Expanded(
-                      //   child: Text('Craft beautiful UIs',
-                      //       textAlign: TextAlign.center),
-                      // ),
-                      Expanded(
-                        // child: FittedBox(
-                        //   fit: BoxFit.contain,
-                          child: InkWell(
-                            onTap: () => Get.to(SignIn()),
-                            child: Container(
-                              width: double.infinity,
-                              alignment: Alignment.center,
-                              padding:
-                                  EdgeInsets.all(kDefaultPadding * 0.75), // 15
-                              decoration: BoxDecoration(
-                                gradient: kPrimaryGradient,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(12)),
-                              ),
-                              child: Text(
-                                "Sign In",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .button
-                                    .copyWith(color: Colors.black),
-                              ),
-                            ),
-                          ),
-                        
-                      ),
 
-                      Expanded(
-                        // child: FittedBox(
-                        //   fit: BoxFit.contain,
-                          child: InkWell(
-                            onTap: () => Get.to(SignUp()),
-                            child: Container(
-                              width: double.infinity,
-                              height:110,
-                              alignment: Alignment.center,
-                              padding:
-                                  EdgeInsets.all(kDefaultPadding * 0.75), // 15
-                              decoration: BoxDecoration(
-                                gradient: kPrimaryGradient,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(12)),
-                              ),
-                              child: Text(
-                                "continue",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .button
-                                    .copyWith(color: Colors.black),
+                  Spacer(), // 1/6
+                  Column(
+                    children: [
+                      Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('Explore Questions'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
                               ),
                             ),
-                          ),
-                        
-                      ),
-                      // Expanded(
-                      //   child: FittedBox(
-                      //     fit:
-                      //         BoxFit.contain, // otherwise the logo will be tiny
-                      //     child: FlutterLogo(),
-                      //   ),
-                      // ),
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('Create Questions'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
+                              ),
+                            ),
+                          ]),
+                      Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('Explore Questions'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('Create Questions'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
+                              ),
+                            ),
+                          ]),
                     ],
                   ),
 
