@@ -3,16 +3,16 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
-import 'package:quiz_app/screens/Authentication/sign_up_page.dart';
-import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1C2300),
       body: Stack(
         children: [
           // SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -21,50 +21,46 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Spacer(flex: 2), //2/6
                   Icon(
-                    Icons.play_circle_fill_outlined,
+                    Icons.login,
                     color: Colors.white,
-                    size: 80.0,
+                    size: 50.0,
                   ),
                   Text(
-                    "Let's Play Quiz,",
+                    "Sign In",
                     style: Theme.of(context).textTheme.headline4.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  //   Text("Enter your informations below"),
-                  // Spacer(), // 1/6
-                  // TextField(
-                  //   decoration: InputDecoration(
-                  //     filled: true,
-                  //     fillColor: Color(0xFF1C2341),
-                  //     hintText: "Full Name",
-                  //     border: OutlineInputBorder(
-                  //       borderRadius: BorderRadius.all(Radius.circular(12)),
-                  //     ),
-                  //   ),
-                  // ),
+                 
+                  //   Text("Email"),
                   Spacer(), // 1/6
-                  InkWell(
-                    onTap: () => Get.to(SignIn()),
-                    child: Container(
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.all(kDefaultPadding * 0.75), // 15
-                      decoration: BoxDecoration(
-                        gradient: kPrimaryGradient,
+                  TextField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFF1C2341),
+                      hintText: "Email",
+                      border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
-                      child: Text(
-                        "Sign In",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button
-                            .copyWith(color: Colors.black),
+                    ),
+                  ),
+                  //  Spacer(),
+                  //   Text("Password"),
+                  Spacer(), // 1/6
+
+                  TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0xFF1C2341),
+                      hintText: "password",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                     ),
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: () => Get.to(SignUp()),
+                    onTap: () => Get.to(QuizScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -74,7 +70,7 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Sign up",
+                        "Lets Start Quiz",
                         style: Theme.of(context)
                             .textTheme
                             .button
