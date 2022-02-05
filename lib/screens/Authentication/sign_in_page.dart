@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:quiz_app/screens/quiz_add_selector/selector.dart';
 
 class SignIn extends StatelessWidget {
   @override
@@ -30,7 +31,7 @@ class SignIn extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline4.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                 
+
                   //   Text("Email"),
                   Spacer(), // 1/6
                   TextField(
@@ -60,7 +61,7 @@ class SignIn extends StatelessWidget {
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(Selector()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
