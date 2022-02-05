@@ -5,14 +5,27 @@ import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'package:quiz_app/screens/Authentication/sign_up_page.dart';
 import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
+import 'package:quiz_app/screens/Explore/explore.dart';
 
 class Selector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.menu),
+        title: Text('Page title'),
+        actions: [
+          Icon(Icons.favorite),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Icon(Icons.search),
+          ),
+          Icon(Icons.more_vert),
+        ],
+        backgroundColor: Colors.black45,
+      ),
       body: Stack(
         children: [
-          // SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -40,7 +53,7 @@ class Selector extends StatelessWidget {
                             Expanded(
                               child: Card(
                                 child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
+                                  onTap: () => Get.to(Explore()),
                                   //  leading: Icon(Icons.album),
                                   title: Text('Explore Questions'),
                                   subtitle: Text('1000'),
@@ -66,7 +79,7 @@ class Selector extends StatelessWidget {
                                 child: ListTile(
                                   onTap: () => Get.to(QuizScreen()),
                                   //  leading: Icon(Icons.album),
-                                  title: Text('Catagories'),
+                                  title: Text('dashbord'),
                                   //   subtitle: Text('Music by Julie Gable.'),
                                 ),
                               ),
@@ -76,7 +89,31 @@ class Selector extends StatelessWidget {
                                 child: ListTile(
                                   onTap: () => Get.to(QuizScreen()),
                                   //  leading: Icon(Icons.album),
-                                  title: Text('New things'),
+                                  title: Text('Favorite'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
+                              ),
+                            ),
+                          ]),
+                      Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('trending'),
+                                  //   subtitle: Text('Music by Julie Gable.'),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Card(
+                                child: ListTile(
+                                  onTap: () => Get.to(QuizScreen()),
+                                  //  leading: Icon(Icons.album),
+                                  title: Text('Recomended'),
                                   //   subtitle: Text('Music by Julie Gable.'),
                                 ),
                               ),
