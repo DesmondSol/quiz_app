@@ -30,7 +30,10 @@ class _SideMenuState extends State<SideMenu> {
                 SizedBox(height: 16),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  child: Text('Account Balance'),
+                  child: Text(
+                    'Enjoy',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
@@ -39,20 +42,25 @@ class _SideMenuState extends State<SideMenu> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          '₹',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 24,
-                          ),
+                        child: Icon(
+                          Icons.question_answer_outlined,
+                          size: 24,
+                          color: Colors.white,
                         ),
+
+                        // Text( '₹',
+                        //   textAlign: TextAlign.start,
+                        //   style: TextStyle(
+                        //     color: Colors.black,
+                        //     fontSize: 24,
+                        //   ),
+                        // ),
                       ),
                       Text(
-                        '${200}',
+                        'Quizer',
                         textAlign: TextAlign.start,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 48,
                         ),
                       )
@@ -72,16 +80,16 @@ class _SideMenuState extends State<SideMenu> {
                             Icon(
                               menuItems[index].menuIcon,
                               color: index == _currentPage
-                                  ? Colors.red
-                                  : Colors.black,
+                                  ? Color(0xFF00FFCB)
+                                  : Colors.white,
                             ),
                             SizedBox(width: 16),
                             Text(
                               menuItems[index].menuName,
                               style: TextStyle(
                                 color: index == _currentPage
-                                    ? Colors.red
-                                    : Colors.black,
+                                    ? Color(0xFF00FFCB)
+                                    : Colors.white,
                                 fontSize: 16,
                               ),
                             ),

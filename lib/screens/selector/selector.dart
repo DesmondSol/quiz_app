@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xFF101010),
         body: Stack(
           children: <Widget>[
             SideMenu(
@@ -98,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage>
                   title: Text(menuItems[currentPage].menuName),
                   systemOverlayStyle: SystemUiOverlayStyle.light,
                 ),
+                backgroundColor: Color(0xFF101010),
                 body: Stack(
                   children: [
                     SafeArea(
