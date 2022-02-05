@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
-import 'package:quiz_app/screens/quiz_add_selector/selector.dart';
+import 'package:quiz_app/screens/selector/selector.dart';
 
 class SignIn extends StatelessWidget {
   @override

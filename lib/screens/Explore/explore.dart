@@ -27,60 +27,63 @@ class Explore extends StatelessWidget {
                         Tab(
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("APPS"),
+                            child: Text("programming"),
                           ),
                         ),
                         Tab(
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("MOVIES"),
+                            child: Text("culture"),
                           ),
                         ),
                         Tab(
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("GAMES"),
+                            child: Text("science"),
                           ),
                         ),
                       ]),
                 ),
                 body: TabBarView(children: [
-                  //Icon(Icons.apps),
-
-                  // Card(
-                  //   child: ListTile(
-                  //     onTap: () => Get.to(QuizScreen()),
-                  //     //  leading: Icon(Icons.album),
-                  //     title: Text('Question 1'),
-                  //        subtitle: Text('A question on technologies'),
-                  //   ),
-                  // ),child: Card(
                   Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const ListTile(
+                      ListTile(
+                        onTap: () => Get.to(QuizScreen()),
                         leading: Icon(Icons.album),
                         title: Text('Question 1'),
                         subtitle: Text('a question on computers by solomon T'),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          TextButton(
-                            child: Icon(Icons.star), //star icon
-                            onPressed: () {/* ... */},
-                          ),
-                          const SizedBox(width: 8),
-                          TextButton(
-                            child: Icon(Icons.arrow_circle_up_outlined), //upvote icon
-                            onPressed: () {/* ... */},
-                          ),
-                          const SizedBox(width: 8),
-                        ],
-                      ),
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            TextButton(
+                              child: Text('programming'), //tags
+                              onPressed: () => Get.to(QuizScreen()),
+                            ),
+                            const SizedBox(width: 8),
+                            TextButton(
+                              child: Text('flutter'), //tags
+                              onPressed: () {/* ... */},
+                            ),
+                            const SizedBox(width: 8),
+                            Spacer(
+                              flex: 2,
+                            ),
+                            TextButton(
+                              child: Icon(Icons.star), //star icon
+                              onPressed: () => Get.to(QuizScreen()),
+                            ),
+                            const SizedBox(width: 8),
+                            TextButton(
+                              child: Icon(
+                                  Icons.arrow_circle_up_outlined), //upvote icon
+                              onPressed: () {/* ... */},
+                            ),
+                            const SizedBox(width: 8),
+                          ]),
                     ],
                   ),
-
                   Icon(Icons.movie),
                   Icon(Icons.games),
                 ]),

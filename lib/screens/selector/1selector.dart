@@ -7,7 +7,7 @@ import 'package:quiz_app/screens/Authentication/sign_up_page.dart';
 import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
 import 'package:quiz_app/screens/Explore/explore.dart';
 
-class Selector extends StatelessWidget {
+class Selectorr extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +89,7 @@ class Selector extends StatelessWidget {
                                 child: ListTile(
                                   onTap: () => Get.to(QuizScreen()),
                                   //  leading: Icon(Icons.album),
-                                  title: Text('Favorite'),
+                                  title: Text('search'),
                                   //   subtitle: Text('Music by Julie Gable.'),
                                 ),
                               ),
@@ -113,7 +113,7 @@ class Selector extends StatelessWidget {
                                 child: ListTile(
                                   onTap: () => Get.to(QuizScreen()),
                                   //  leading: Icon(Icons.album),
-                                  title: Text('Recomended'),
+                                  title: Text('favorite'),
                                   //   subtitle: Text('Music by Julie Gable.'),
                                 ),
                               ),
