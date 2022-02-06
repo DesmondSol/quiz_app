@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:quiz_app/screens/authentication/sign_in_page.dart';
+
 
 class SignUp extends StatelessWidget {
   @override
@@ -72,7 +73,7 @@ class SignUp extends StatelessWidget {
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(SignIn()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

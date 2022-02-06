@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/Explore/explore.dart';
 import 'package:quiz_app/screens/add_questions/add_questions.dart';
+import 'package:quiz_app/screens/dashboard/dashbard.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'side_menu.dart';
 import 'swipe_animation.dart';
@@ -159,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(QuizScreen()),
+                                            onTap: () => Get.to(DashBoard()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('dashbord'),
                                             //   subtitle: Text('Music by Julie Gable.'),
@@ -169,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(QuizScreen()),
+                                            onTap: () => Get.to(Explore()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('search'),
                                             //   subtitle: Text('Music by Julie Gable.'),
@@ -183,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(QuizScreen()),
+                                            onTap: () => Get.to(Explore()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('trending'),
                                             //   subtitle: Text('Music by Julie Gable.'),
@@ -193,7 +194,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(QuizScreen()),
+                                            onTap: () => Get.to(Explore()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('favorite'),
                                             //   subtitle: Text('Music by Julie Gable.'),
