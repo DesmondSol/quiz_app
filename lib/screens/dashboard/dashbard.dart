@@ -7,7 +7,7 @@ import 'package:quiz_app/screens/Authentication/sign_up_page.dart';
 import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
 import 'package:quiz_app/screens/Explore/explore.dart';
 
-class Selectorr extends StatelessWidget {
+class dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

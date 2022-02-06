@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/Explore/explore.dart';
+import 'package:quiz_app/screens/add_questions/add_questions.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'side_menu.dart';
 import 'swipe_animation.dart';
@@ -144,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(QuizScreen()),
+                                            onTap: () => Get.to(addQuestions()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('Create Questions'),
                                             subtitle: Text('New'),
