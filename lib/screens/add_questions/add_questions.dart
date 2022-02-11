@@ -32,7 +32,7 @@ class addQuestions extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline3.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
-
+                Spacer(),
                 // 1/6
                 Flexible(
                   child: TextField(
@@ -48,27 +48,27 @@ class addQuestions extends StatelessWidget {
                   ),
                 ),
                 //  Spacer(), // 1/6
-                //   Text("Email"),
+                //   Text("Choice"),
                 // Spacer(), // 1/6
                 Column(
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: Text(
-                            "choice",
-                            textAlign: TextAlign.left,
-                          ),
-                        ),
-                        Flexible(
-                          child: Text(
-                            "answer",
-                            textAlign: TextAlign.end,
-                          ),
-                        )
-                      ],
-                    ),
+                    // Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.center,
+                    //   children: [
+                    //     Flexible(
+                    //       child: Text(
+                    //         "choice",
+                    //         textAlign: TextAlign.left,
+                    //       ),
+                    //     ),
+                    //     Flexible(
+                    //       child: Text(
+                    //         "answer",
+                    //         textAlign: TextAlign.end,
+                    //       ),
+                    //     )
+                    //   ],
+                    // ),
                     Row(
                       children: [
                         Flexible(
@@ -76,7 +76,7 @@ class addQuestions extends StatelessWidget {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Color(0xFF1C2341),
-                              hintText: "Email",
+                              hintText: "Choice",
                               border: OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(12)),
@@ -97,7 +97,7 @@ class addQuestions extends StatelessWidget {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Color(0xFF1C2341),
-                              hintText: "Email",
+                              hintText: "Choice",
                               border: OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(12)),
@@ -118,7 +118,7 @@ class addQuestions extends StatelessWidget {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Color(0xFF1C2341),
-                              hintText: "Email",
+                              hintText: "Choice",
                               border: OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(12)),
@@ -139,7 +139,7 @@ class addQuestions extends StatelessWidget {
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Color(0xFF1C2341),
-                              hintText: "Email",
+                              hintText: "Choice",
                               border: OutlineInputBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(12)),
