@@ -29,7 +29,7 @@ class addQuestions extends StatelessWidget {
                 ),
                 Text(
                   "Add Questions",
-                  style: Theme.of(context).textTheme.headline3.copyWith(
+                  style: Theme.of(context).textTheme.headline3?.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),

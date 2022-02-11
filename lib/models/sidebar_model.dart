@@ -6,8 +6,8 @@ class MenuItem {
   final IconData menuIcon;
 
   const MenuItem({
-    @required this.menuName,
-    @required this.menuIcon,
+    required this.menuName,
+    required this.menuIcon,
   });
 }
 

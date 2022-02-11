@@ -6,11 +6,11 @@ import 'package:quiz_app/models/users_model.dart';
 class QuizDatabase {
   static final QuizDatabase instance = QuizDatabase._init();
 
-  static Database _database;
+  static Database? _database;
 
   QuizDatabase._init();
 
-  Future<Database> get database async {
+  Future<Database?> get database async {
     if (_database != null) return _database;
 
     _database = await _initDB('quiz.db');
@@ -53,14 +53,14 @@ CREATE TABLE $tableNotes (
     // final id = await db
     //     .rawInsert('INSERT INTO table_name ($columns) VALUES ($values)');
 
-    final id = await db.insert(tableNotes, note.toJson());
+    final id = await db!.insert(tableNotes, note.toJson());
     return note.copy(id: id);
   }
 
   Future<UsersModel> readNote(int id) async {
     final db = await instance.database;
 
-    final maps = await db.query(
+    final maps = await db!.query(
       tableNotes,
       columns: UserFields.values,
       where: '${UserFields.id} = ?',
@@ -81,7 +81,7 @@ CREATE TABLE $tableNotes (
     // final result =
     //     await db.rawQuery('SELECT * FROM $tableNotes ORDER BY $orderBy');
 
-    final result = await db.query(tableNotes, orderBy: orderBy);
+    final result = await db!.query(tableNotes, orderBy: orderBy);
 
     return result.map((json) => UsersModel.fromJson(json)).toList();
   }
@@ -89,7 +89,7 @@ CREATE TABLE $tableNotes (
   Future<int> update(UsersModel note) async {
     final db = await instance.database;
 
-    return db.update(
+    return db!.update(
       tableNotes,
       note.toJson(),
       where: '${UserFields.id} = ?',
@@ -100,7 +100,7 @@ CREATE TABLE $tableNotes (
   Future<int> delete(int id) async {
     final db = await instance.database;
 
-    return await db.delete(
+    return await db!.delete(
       tableNotes,
       where: '${UserFields.id} = ?',
       whereArgs: [id],
@@ -110,6 +110,6 @@ CREATE TABLE $tableNotes (
   Future close() async {
     final db = await instance.database;
 
-    db.close();
+    db!.close();
   }
 }
