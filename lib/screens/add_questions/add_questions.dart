@@ -20,12 +20,12 @@ class addQuestions extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.start,
               // mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(),
+                Spacer(),
                 //2/6
                 Icon(
                   Icons.new_label_outlined,
                   color: Colors.white,
-                  size: 30.0,
+                  size: 50.0,
                 ),
                 Text(
                   "Add Questions",
