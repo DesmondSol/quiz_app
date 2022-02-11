@@ -86,7 +86,7 @@ class addQuestions extends StatelessWidget {
                         ),
                         Checkbox(
                           value: false,
-                          onChanged: (bool value) {},
+                          onChanged: ( value) { },
                         )
                       ],
                     ),
@@ -107,7 +107,7 @@ class addQuestions extends StatelessWidget {
                         ),
                         Checkbox(
                           value: false,
-                          onChanged: (bool value) {},
+                          onChanged: ( value) {},
                         )
                       ],
                     ),
@@ -128,7 +128,7 @@ class addQuestions extends StatelessWidget {
                         ),
                         Checkbox(
                           value: false,
-                          onChanged: (bool value) {},
+                          onChanged: ( value) {},
                         )
                       ],
                     ),
@@ -149,7 +149,7 @@ class addQuestions extends StatelessWidget {
                         ),
                         Checkbox(
                           value: false,
-                          onChanged: (bool value) {},
+                          onChanged: ( value) {},
                         )
                       ],
                     ),
@@ -188,7 +188,7 @@ class addQuestions extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.black),
+                          ?.copyWith(color: Colors.black),
                     ),
                   ),
                 ),
@@ -207,7 +207,7 @@ class addQuestions extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.black),
+                          ?.copyWith(color: Colors.black),
                     ),
                   ),
                 ),

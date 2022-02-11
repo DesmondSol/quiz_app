@@ -28,7 +28,7 @@ class SignIn extends StatelessWidget {
                   ),
                   Text(
                     "Sign In",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
+                    style: Theme.of(context).textTheme.headline4?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
 
@@ -75,7 +75,7 @@ class SignIn extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .button
-                            .copyWith(color: Colors.black),
+                            ?.copyWith(color: Colors.black),
                       ),
                     ),
                   ),
