@@ -8,7 +8,7 @@ class SwipeAnimation extends StatefulWidget {
   final Widget child;
   final Function(bool) navigationDrawerOpened;
 
-  SwipeAnimation({Key key, this.child, this.navigationDrawerOpened})
+  SwipeAnimation({Key? key, required this.child, required this.navigationDrawerOpened})
       : super(key: key);
 
   @override
@@ -21,8 +21,8 @@ class SwipeAnimationState extends State<SwipeAnimation>
   double lastX = 0;
   bool swipingLeft = false;
 
-  Animation<int> animation;
-  AnimationController controller;
+  late Animation<int> animation;
+  late AnimationController controller;
 
   @override
   void initState() {

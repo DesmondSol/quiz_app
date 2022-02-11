@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/models/sidebar_model.dart';
 
 class SideMenu extends StatefulWidget {
-  final Function(int) _onMenuItemSelection;
+ final Function _onMenuItemSelection;
 
   SideMenu({
-    @required Function onMenuItemSelection,
+    required Function onMenuItemSelection,
   }) : _onMenuItemSelection = onMenuItemSelection;
 
   @override

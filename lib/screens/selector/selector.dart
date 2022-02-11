@@ -39,8 +39,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   int currentPage = 0;
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
   bool isNavigationDrawerOpened = false;
   GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
   GlobalKey<SwipeAnimationState> swipeAnimationKey = new GlobalKey();
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage>
           children: <Widget>[
             SideMenu(
               onMenuItemSelection: (pageIndex) {
-                swipeAnimationKey.currentState.hideNavigationDrawer();
+                swipeAnimationKey.currentState?.hideNavigationDrawer();
                 setState(() {
                   currentPage = pageIndex;
                 });
@@ -91,10 +91,10 @@ class _MyHomePageState extends State<MyHomePage>
                     onPressed: () {
                       if (isNavigationDrawerOpened) {
                         controller.reverse();
-                        swipeAnimationKey.currentState.hideNavigationDrawer();
+                        swipeAnimationKey.currentState?.hideNavigationDrawer();
                       } else {
                         controller.forward();
-                        swipeAnimationKey.currentState.showNavigationDrawer();
+                        swipeAnimationKey.currentState?.showNavigationDrawer();
                       }
                     },
                   ),
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage>
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(
+                                  ?.copyWith(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
                             ),
