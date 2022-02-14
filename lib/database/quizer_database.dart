@@ -64,7 +64,7 @@ CREATE TABLE $tableUsers (
     final maps = await db!.query(
       tableUsers,
       columns: UserField.values,
-      where: '${UserField.id} = ?',
+      where: '${UserField.id} = ?', //sql injection fix
       whereArgs: [id],
     );
 
