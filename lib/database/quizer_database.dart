@@ -1,8 +1,7 @@
 import 'package:path/path.dart';
 import 'package:quiz_app/models/app_users_model.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:quiz_app/models/users_model.dart';
-
+import 'package:quiz_app/models/Questions_model.dart';
 
 class QuizDatabase {
   static final QuizDatabase instance = QuizDatabase._init();
@@ -39,6 +38,21 @@ CREATE TABLE $tableUsers (
   ${UserField.password} $textType,
   ${UserField.phone} $integerType,
   ${UserField.time} $textType
+  )
+''');
+
+    await db.execute('''
+CREATE TABLE $tableQuestion ( 
+  ${QuestionField.id} $idType, 
+  ${QuestionField.author} $textType,
+  ${QuestionField.description} $textType,
+  ${QuestionField.question} $textType,
+  ${QuestionField.choice_a} $textType,
+  ${QuestionField.choice_b} $textType,
+  ${QuestionField.choice_c} $textType,
+  ${QuestionField.choice_d} $textType,
+  ${QuestionField.answer} $textType,
+  ${QuestionField.tags} $textType
   )
 ''');
   }
