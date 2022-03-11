@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 
-class Explore extends StatefulWidget {
+class Dashboard extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => ExploreState();
+  State<StatefulWidget> createState() => DashboardState();
 }
 
-class ExploreState extends State {
+class DashboardState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
