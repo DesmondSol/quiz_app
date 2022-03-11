@@ -1,132 +1,99 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
-import 'package:quiz_app/screens/Authentication/sign_up_page.dart';
-import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
-import 'package:quiz_app/screens/Explore/explore.dart';
 
-class DashBoard extends StatelessWidget {
+class Explore extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => ExploreState();
+}
+
+class ExploreState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text('Page title'),
-        actions: [
-          Icon(Icons.favorite),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(Icons.search),
-          ),
-          Icon(Icons.more_vert),
-        ],
-        backgroundColor: Colors.black45,
-      ),
       body: Stack(
         children: [
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Spacer(flex: 2), //2/6
-                  Icon(
-                    Icons.play_circle_fill_outlined,
-                    color: Colors.white,
-                    size: 80.0,
-                  ),
-                  Text(
-                    "Let's Play Quiz,",
-                    style: Theme.of(context).textTheme.headline4?.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-
-                  Spacer(), // 1/6
+          DefaultTabController(
+              length: 3,
+              child: Scaffold(
+                appBar: AppBar(
+                  backgroundColor: Colors.black54,
+                  elevation: 0,
+                  bottom: TabBar(
+                      unselectedLabelColor: Colors.white,
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicator: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [Colors.black, Colors.black26]),
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.white),
+                      tabs: [
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("programming"),
+                          ),
+                        ),
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("culture"),
+                          ),
+                        ),
+                        Tab(
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("science"),
+                          ),
+                        ),
+                      ]),
+                ),
+                body: TabBarView(children: [
                   Column(
-                    children: [
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ListTile(
+                        onTap: () => Get.to(QuizScreen()),
+                        leading: Icon(Icons.album),
+                        title: Text('Question 1'),
+                        subtitle: Text('a question on computers by solomon T'),
+                      ),
                       Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(Explore()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('Explore Questions'),
-                                  subtitle: Text('1000'),
-                                ),
-                              ),
+                            TextButton(
+                              child: Text('programming'), //tags
+                              onPressed: () => Get.to(QuizScreen()),
                             ),
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('Create Questions'),
-                                  subtitle: Text('New'),
-                                ),
-                              ),
+                            const SizedBox(width: 8),
+                            TextButton(
+                              child: Text('flutter'), //tags
+                              onPressed: () {/* ... */},
                             ),
-                          ]),
-                      Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('dashbord'),
-                                  //   subtitle: Text('Music by Julie Gable.'),
-                                ),
-                              ),
+                            const SizedBox(width: 8),
+                            Spacer(
+                              flex: 2,
                             ),
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('search'),
-                                  //   subtitle: Text('Music by Julie Gable.'),
-                                ),
-                              ),
+                            TextButton(
+                              child: Icon(Icons.star), //star icon
+                              onPressed: () => Get.to(QuizScreen()),
                             ),
-                          ]),
-                      Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('trending'),
-                                  //   subtitle: Text('Music by Julie Gable.'),
-                                ),
-                              ),
+                            const SizedBox(width: 8),
+                            TextButton(
+                              child: Icon(
+                                  Icons.arrow_circle_up_outlined), //upvote icon
+                              onPressed: () {/* ... */},
                             ),
-                            Expanded(
-                              child: Card(
-                                child: ListTile(
-                                  onTap: () => Get.to(QuizScreen()),
-                                  //  leading: Icon(Icons.album),
-                                  title: Text('favorite'),
-                                  //   subtitle: Text('Music by Julie Gable.'),
-                                ),
-                              ),
-                            ),
+                            const SizedBox(width: 8),
                           ]),
                     ],
                   ),
-
-                  Spacer(flex: 2), // it will take 2/6 spaces
-                ],
-              ),
-            ),
-          ),
+                  Icon(Icons.movie),
+                  Icon(Icons.games),
+                ]),
+              )),
+          // SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
         ],
       ),
     );
