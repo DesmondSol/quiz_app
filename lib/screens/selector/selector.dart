@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/screens/Explore/explore.dart';
 import 'package:quiz_app/screens/add_questions/add_questions.dart';
+import 'package:quiz_app/screens/dashboard/analytics/list_of_people_answered.dart';
 import 'package:quiz_app/screens/dashboard/dashbard.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'side_menu.dart';
@@ -160,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage>
                                       Expanded(
                                         child: Card(
                                           child: ListTile(
-                                            onTap: () => Get.to(DashBoard()),
+                                            onTap: () => Get.to(dashboard()),
                                             //  leading: Icon(Icons.album),
                                             title: Text('dashbord'),
                                             //   subtitle: Text('Music by Julie Gable.'),
