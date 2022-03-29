@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/authentication/sign_in_page.dart';
-
+import 'package:quiz_app/screens/Authentication/sign_in_page.dart';
 
 class SignUp extends StatelessWidget {
   @override

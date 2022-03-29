@@ -42,6 +42,7 @@ dependencies:
 
   #time modifier
   intl: ^0.17.0
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
